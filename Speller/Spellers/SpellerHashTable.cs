@@ -1,16 +1,16 @@
 ﻿using Speller.Hashtable;
 using System.Collections;
 
-namespace Speller
+namespace Speller.Spellers
 {
-    public class Speller
+    public class SpellerHashTable
     {
         public const int SIZE_TABLE = 100;
         private Hashtable<string> HashTable { get; set; }
-        public Speller() 
+        public SpellerHashTable()
         {
             HashTable = new Hashtable<string>(SIZE_TABLE);
-        }    
+        }
         public bool Load(string dictionary)
         {
             using (var reader = new StreamReader(dictionary))
